@@ -82,7 +82,7 @@ app.delete('/api/todos/:todo_id', function(req, res){
 		 	
 
 		 	// get and return all the todos after you delete one
-		 	Todo.find(function(err, todos){
+		 	toDo.find(function(err, todos){
 		 		if(err) res.send(err);
 		 		res.json(todos);
 		 	});

@@ -65,7 +65,6 @@ app.post('/api/todos', function(req, res){
 		done : false
 	}, function(err, todos){
 		if(err) res.send(err);
-
 		toDo.find(function(err, todos){
 			if(err) res.send(err);
 			res.json(todos);
@@ -79,8 +78,6 @@ app.delete('/api/todos/:todo_id', function(req, res){
 		_id : req.params.todo_id
 	}, function(err, todo){
 		 	if(err) res.send(err);
-		 	
-
 		 	// get and return all the todos after you delete one
 		 	toDo.find(function(err, todos){
 		 		if(err) res.send(err);
